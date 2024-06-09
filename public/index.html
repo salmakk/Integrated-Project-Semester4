@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+
+  <title>Document Anchoring</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <!-- Load supporting libraries for react -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+
+</head>
+
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+    <div class="container-lg">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="images\Capture d'écran 2024-05-16 094449.png" alt="Description de l'image"  class="logo-img"/>
+    </a>
+    <a class="navbar-brand fw-bold app-name" href="#" style="color: black;" >Anchør</a>
+    
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#hero">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link d-lg-none" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+          <ul id="nav" class="navbar-nav me-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="#how">How does it work</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#FAQ">FAQ</a>
+              </li>
+  
+          </ul>
+      </div>
+        <a class="btn btn-outline-dark d-none d-lg-block" href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+  
+  <section class="hero" id="hero">
+    <div class="container-lg">
+      <div class="row align-items-center">
+        <div class="col-sm-6">
+          <h1 class="display-2 fw-bold">Anchør</h1>
+          <p>Anchør est le meilleur choix pour l'ancrage, la vérification et la révocation sécurisée de vos documents dans Hedera Hashgraph HCS.
+            Profitez dès maintenant de la sécurité inégalée d'Achør pour protéger vos informations critiques.
+          </p>
+          <div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#anchormod">
+              Anchor
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#validatemod" onclick="ReRenderValidate()">
+              Verify
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#revokemod" >
+              Revoke
+            </button>
+        </div>
+        </div>
+        <div class="col-sm-6 text-center">
+          <img src="https://static.vecteezy.com/system/resources/previews/002/307/540/non_2x/anchor-text-rgb-color-icon-vector.jpg" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="services" id="services">
+    <div class="container">
+      <h2 class="display-5 fw-bold mb-4">Services</h2>
+      <div class="row">
+        <div class="col-lg col-sm-6 mt-4">
+          <a href="#hero" class="">
+            <div class="card">
+              <div class="icon-wrapper">
+                <img src="images\image.png" alt="Icon" class="custom-icon">
+              </div>
+              <h5 class="card-title fw-bold">Anchor</h5>
+              <p class="card-text">Ancrez vos documents en un clic pour une sécurité totale avec Anchor.</p>
+            </div>
+          </a>
+        </div>
+        
+     
+        <div class="col-lg col-sm-6 mt-4">
+          <a href="#hero" class="">
+            <div class="card">
+              <div class="icon-wrapper">
+                <img src="images\verify.jpg" alt="Icon" class="custom-icon">
+              </div>
+              <h5 class="card-title fw-bold">Verify</h5>
+              <p class="card-text">Validez instantanément l'authenticité des documents avec Verify.</p>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-lg col-sm-6 m-auto mt-4">
+          <a href="#hero" class="">
+            <div class="card">
+              <div class="icon-wrapper">
+                <img src="images\revoke.jpg" alt="Icon" class="custom-icon">
+              </div>
+              <h5 class="card-title fw-bold">Revoke</h5>
+              <p class="card-text">Révoquez en toute simplicité les documents déjà ancrés avec Revoke.</p>
+            </div>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="display-5 fw-bold mb-4">About us</h2>
+      <p>À Hedera Hashgraph, nous sommes passionnés par l'innovation technologique et l'avenir de la blockchain. Notre plateforme offre une sécurité inégalée, une scalabilité exceptionnelle et une gouvernance décentralisée, transformant ainsi la manière dont les entreprises et les individus interagissent avec la blockchain. Avec notre engagement envers l'excellence technique et la collaboration, nous façonnons un avenir où la confiance et la rapidité des transactions sont primordiales..</p>
+      
+    </div>
+  </section>
+
+  <section class="clients section">
+    <div class="container" id="how">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center">How does it work</h1>
+                  <p class="">Ce système de validation utilise la blockchain Hedera Hashgraph pour valider les documents, permettant aux utilisateurs d'être certains que leur fichier est la forme authentique et non falsifiée du document.
+                    Lorsqu'un document est téléchargé, le système stocke le document et génère un hash Hedera à partir de celui-ci. Ensuite, il utilise les API Hedera pour ancrer ce hash sur la blockchain. À l'avenir, lorsque le même fichier est téléchargé dans la section de validation, le système génère à nouveau un hash et vérifie si ce même hash existe sur la blockchain. Si tel est le cas, le document est valide. Sinon, soit le fichier n'a pas été téléchargé dans le système auparavant, soit le document est invalide.</p>
+            </div>
+        </div>
+    </div>
+</section>
+  <section class="clients section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center" id="FAQ">FAQ</h1>
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+
+        <div class="accordion w-100" id="basicAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#basicAccordionCollapseOne" aria-expanded="false"
+                aria-controls="collapseOne">
+                How does Anchoring work on the Hedera Blockchain?
+              </button>
+            </h2>
+            <div id="basicAccordionCollapseOne" class="accordion-collapse collapse"
+              aria-labelledby="headingOne" data-mdb-parent="#basicAccordion" style="">
+              <div class="accordion-body">
+                Answer #1
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#basicAccordionCollapseTwo" aria-expanded="false"
+                aria-controls="collapseTwo">
+                How can I trust that my files are handled with integrity?
+              </button>
+            </h2>
+            <div id="basicAccordionCollapseTwo" class="accordion-collapse collapse"
+              aria-labelledby="headingTwo" data-mdb-parent="#basicAccordion" style="">
+              <div class="accordion-body">
+                Answer #2
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#basicAccordionCollapseThree" aria-expanded="false"
+                aria-controls="collapseThree">
+                Who is apart of the awesome team behind such a technology?
+              </button>
+            </h2>
+            <div id="basicAccordionCollapseThree" class="accordion-collapse collapse"
+              aria-labelledby="headingThree" data-mdb-parent="#basicAccordion">
+              <div class="accordion-body">
+                Answer #3
+              </div>
+            </div>
+          </div>
+        </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+  
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="display-5 fw-bold mb-4">CONTACT US</h2>
+      <div class="row">
+        <div class="col-sm-4 mt-4">
+            <a href="#"><i class="bi bi-envelope-fill"></i> ...</a>
+        </div>
+        <div class="col-sm-4 mt-4">
+          <div class="social-media">
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-4 mt-4">
+          <a href="#"><i class="bi bi-telephone-fill"></i> ...</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+ 
+  
+  <p class="mt-5 text-center">Get a step-by-step written explanation here: <a href="https://codingyaar.com/portfolio-website-html-css-bootstrap/" target="_blank">How To Create Portfolio Website HTML CSS Bootstrap</a> </p>
+  
+  <p class="mt-3 text-center">Get a step-by-step video explanation here: <a href="https://youtu.be/4j_1LWZL0kE" target="_blank">How To Create Portfolio Website HTML CSS Bootstrap</a> </p>
+
+
+
+  <!-- ANCHOR MODAL-->
+<!-- IDK WHY THIS BIT ISNT WORKING, THE BOOTSTRAP EXAMPLE CODE IS LITERALLY THE SAME -->
+<div class="modal fade" id="anchormod" tabindex="-1" aria-labelledby="anchormod" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="anchormod">Anchor</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="anchormodbody">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VALIDATE MODAL-->
+<!-- IDK WHY THIS BIT ISNT WORKING, THE BOOTSTRAP EXAMPLE CODE IS LITERALLY THE SAME -->
+<div class="modal fade" id="validatemod" tabindex="-1" aria-labelledby="anchormod" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="anchormod">Validate</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"  >Close</button>
+      </div>
+      <div class="modal-body" id="validatemodbody">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="revokemod" tabindex="-1" aria-labelledby="revokemod" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="anchormod">Revoke</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="revokemodbody">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+              
+           
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <p class="lead">Copyright &copy; 2024 ANCHØR </p>
+  
+        <a href="#" class="position-absolute bottom-0 end-0 p-5" style="text-decoration: none;">
+          <i class="bi bi-arrow-up-circle h1" style="color: white;"></i>
+        </a>
+      </div>
+    </footer>
+
+
+  <!-- Load React component. -->
+
+  <script src="/react-scripts/react-app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>

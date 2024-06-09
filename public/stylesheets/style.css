@@ -1,0 +1,257 @@
+:root {
+  --accent-color: #1c9bdb;
+}
+
+section [class^="container"] {
+  padding: 4rem 2rem;
+}
+@media screen and (min-width: 1024px) {
+  section [class^="container"] {
+    padding: 4rem;
+  }
+  nav [class^="container"] {
+    padding: 0 4rem;
+  }
+}
+
+section:not(:first-of-type) {
+  text-align: center;
+}
+
+section:nth-child(2n) {
+  background-color: #ecf2ff;
+}
+
+.container a {
+  color: #000000;
+  text-decoration: none;
+}
+.container a:hover {
+  color: var(--accent-color);
+}
+
+section .card,
+.btn-outline-dark {
+  border: 2px solid #000000;
+  box-shadow: 4px 4px #000000;
+  transition: all 0.4s;
+}
+.btn-outline-dark:hover {
+  box-shadow: 4px 4px var(--accent-color);
+}
+
+/* NAVBAR */
+
+.navbar {
+  background-color: #ffffff;
+}
+
+.navbar-nav .nav-link {
+  color: #000000;
+  font-size: 1.1rem;
+  transition: all 0.5s;
+}
+.navbar-nav .nav-link:hover {
+  color: var(--accent-color);
+}
+@media screen and (min-width: 1024px) {
+  .navbar-nav .nav-item {
+    padding: 0 1rem;
+  }
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+}
+
+/* HERO */
+
+section.hero {
+  padding-top: 72px;
+}
+@media screen and (max-width: 576px) {
+  section.hero {
+    text-align: center;
+  }
+  section.hero img {
+    width: 80%;
+    margin: 0.5rem 0;
+  }
+}
+
+/* SERVICES */
+
+section.services i {
+  font-size: 2rem;
+  margin: 1rem auto 0;
+  border: 2px solid #000000;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-color);
+}
+
+section .card {
+  max-width: 22rem;
+  margin-inline: auto;
+}
+/* ABOUT */
+@media screen and (min-width: 1024px) {
+  section.about .container,
+  section.testimonials .container {
+    width: 60%;
+  }
+}
+
+/* PROJECTS */
+section.projects .card {
+  max-width: 17rem;
+  text-align: left;
+}
+section.projects .card img {
+  max-width: 70%;
+  margin: 1rem auto;
+}
+
+/* TESTIMONIALS */
+
+section.testimonials .carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+section.testimonials .carousel-item p {
+  max-width: 80%;
+  border-left: 5px solid var(--accent-color);
+  padding-left: 1rem;
+  text-align: left;
+}
+section.testimonials .carousel-item h5 {
+  text-align: left;
+}
+section.testimonials .carousel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section.testimonials .carousel.carousel-fade .carousel-item {
+  transition: opacity 0.5s;
+}
+/* CONTACT */
+section.contact .social-media a {
+  padding: 0 0.5rem;
+  font-size: 1.3rem;
+}
+
+.logo-img {
+  width: 50px; /* Ajustez la largeur selon vos besoins */
+  height: 50px; /* Ajustez la hauteur selon vos besoins pour rendre l'image circulaire */
+  border-radius: 50%; /* Rend l'image circulaire */
+  object-fit: cover; /* Assure que l'image s'adapte bien à la forme circulaire */
+}
+
+.app-name {
+  color: black; /* Couleur du texte */
+  font-size: 24px; /* Taille de la police */
+  font-weight: bold; /* Gras */
+  font-family: 'Arial', sans-serif; /* Police de caractères */
+  text-transform: uppercase; /* Mettre le texte en majuscules */
+  text-decoration: none; /* Retirer la soulignure */
+  padding: 10px; /* Ajouter un peu d'espace autour */
+  transition: color 0.3s ease; /* Transition douce pour le changement de couleur */
+}
+
+.img-fluid {
+   /* Définissez la hauteur souhaitée */
+  border-radius: 50%; /* Rend l'image ronde */
+  overflow: hidden; /* Cache les parties débordantes de l'image */
+  object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le conteneur */
+}
+  
+
+
+.card-text {
+  color: initial; /* Couleur initiale du texte */
+}
+
+.card:active .card-text {
+  color: rgb(6, 6, 30); /* Couleur du texte lorsqu'il est cliqué */
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3em;
+  height: 3em;
+  background-color: rgb(10, 18, 26);
+  border-radius: 50%;
+  margin: 0 auto 1em;
+}
+
+.custom-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* L'image remplit le cercle tout en maintenant son aspect ratio */
+  border-radius: 100%; /* S'assure que l'image elle-même est circulaire */
+}
+
+
+
+/* Styles for modal headers */
+.modal-header {
+  background-color: #101011; /* Sky blue color */
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Styles for modal titles */
+.modal-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Styles for modal bodies */
+.modal-body {
+  padding: 20px;
+  background-color: white; /* Light sky blue color */
+}
+
+/* Styles for modal footers */
+.modal-footer {
+  background-color: white; /* Lighter blue color */
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top: none;
+}
+
+/* Custom button styles */
+.btn-secondary {
+  background-color: white; /* Medium sky blue color */
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: white; /* Darker blue on hover */
+}
+
+/* Custom close button styles */
+.btn-close {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  opacity: 1;
+}
+
+.btn-close:hover {
+  color: #d3d3d3;
+}
