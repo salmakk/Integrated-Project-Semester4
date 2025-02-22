@@ -43,7 +43,7 @@ The project is designed with a modular approach, consisting of the following com
 ## 🚀 Getting Started
 ### 1. Clone the Repository
 ```bash
-   git clone https://github.com/your-username/document-anchoring.git
+   git clone https://github.com/salmakk/Integrated-Project-Semester4.git
 ```
 ### 2. Set Up Environment Variables
 Create a .env file and add your Hedera credentials.
@@ -69,7 +69,7 @@ Contributions are welcome! If you want to suggest a modification, here are the s
 Fork the project on GitHub by clicking on the "Fork" button at the top right of this page.
 1. Clone your fork locally :
 ```bash
-   npm start
+   git clone https://github.com/salmakk/Integrated-Project-Semester4.git
 ```
 2. Create a new branch :
 ```bash
