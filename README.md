@@ -57,13 +57,7 @@ Implement multi-signature verification for enhanced security.
 Improve UI/UX for a smoother experience.
 Expand support for additional blockchain networks.
 
-👥 Contributors
-Houda BELABBES
-Lamiae BOUKHAM
-Salma EL BEKKARI
-Chaimae SALLEM
-
-### Contribute :
+##  👥 Contribute :
 
 Contributions are welcome! If you want to suggest a modification, here are the steps to follow:
 Fork the project on GitHub by clicking on the "Fork" button at the top right of this page.
